@@ -9,9 +9,13 @@
 <script>
 
   import  FooterGuide from './components/FooterGuide/FooterGuide.vue'
+
   export  default {
 
-
+    //异步显示数据
+    mounted(){
+      this.$store.dispatch("getAddress")
+    },
     components:{
       FooterGuide
     }
